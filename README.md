@@ -98,6 +98,7 @@ $$
 
 
 The logarithmic form of Bayes’ theorem can be obtained by taking the logarithm:
+
 $$
 \log{Odds(H, M | x)} =  \log{\frac{P(H)}{P(M)}} * \log{\frac{P(x | H)}{P(x | M)}}
 $$
@@ -120,6 +121,7 @@ $$
 $$
 
 Based on the *Naive* assumption that words appear independently in a text, and the authors decision to set the priors as equally probable ($P(H) = P(M) = 1/2$) the log-likelyhood ratio for all feature words of interest $\{x_1, ..., x_n\}$ becomes:
+
 $$
 \text{decision} =  \log{\frac{P(x_1, ..., x_n | H)P(H)}{P(x_1, ..., x_n | M)P(M)}} \\
 =\prod_{i=1}^{n} \frac{P(x_i| H)}{P(x_i | M)} \\
