@@ -124,8 +124,11 @@ Based on the *Naive* assumption that words appear independently in a text, and t
 
 $$
 \text{decision} =  \log{\frac{P(x_1, ..., x_n | H)P(H)}{P(x_1, ..., x_n | M)P(M)}} \\
-=\prod_{i=1}^{n} \frac{P(x_i| H)}{P(x_i | M)} \\
+
+=\log \prod_{i=1}^{n} \frac{P(x_i| H)}{P(x_i | M)} \\
+
 = \sum_{i}^{n} \log \frac{ P(x_i| H)}{ P(x_i | M)} \\
+
 = \sum_{i}^{n} x_i \log{\frac{\mu_{H_i}}{\mu_{M_i}}} - w(\mu_{H_i}-\mu_{M_i})
 $$
 
