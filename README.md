@@ -120,7 +120,7 @@ $$
 =x\log{\mu_H/\mu_M} - w(\mu_H-\mu_M) 
 $$
 
-Based on the *Naive* assumption that words appear independently in a text, and the authors decision to set the priors as equally probable ($P(H) = P(M) = 1/2$) the log-likelyhood ratio for all feature words of interest $\{x_1, ..., x_n\}$ becomes:
+Based on the *Naive* assumption that words appear independently in a text, and the authors decision to set the priors as equally probable ($P(H) = P(M) = 1/2$) the priora cancel out in the log-odds ratio and it is resuced to the log-likelyhood ratio for all feature words of interest $\{x_1, ..., x_n\}$ becomes:
 
 $$
 \text{decision} =  \log{\frac{P(x_1, ..., x_n | H)P(H)}{P(x_1, ..., x_n | M)P(M)}} \\
@@ -130,6 +130,8 @@ $$
 $$
 
 where $\mu_{H_i}$ and $\mu_{M_i}$ are estimated means of occurences / 1000 words for eaach individual word $i$.
+
+**decision** is a predictor that states the odds with which Hamilton is the author over Madison. This can be proven to be an optimal predictor that minimizes the empirical risk, and for a modern approach to this part, you may want to check [Chapter 1 of mlstory.org](https://www.mlstory.org/prediction.html).
 
 <!--
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
