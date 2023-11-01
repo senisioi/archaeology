@@ -102,10 +102,10 @@ $$
 The logarithmic form of Bayes’ theorem can be obtained by taking the logarithm:
 
 $$
-\log{Odds(H, M | x)} =  \log{\frac{P(H)}{P(M)}} * \log{\frac{P(x | H)}{P(x | M)}}
+\log{Odds(H, M | x)} =  \log{\frac{P(H)}{P(M)}} + \log{\frac{P(x | H)}{P(x | M)}}
 $$
 
-The initial odds [priors] $\log{\frac{P(H)}{P(M)}}$ are treated in Naive Bayes as the normalized counts for each author / class. The authors make extensive analyses of the impact of these priors, see Section 4C in the paper and Section 3.1C in the book. And they conclude by setting the initial odds as equally probable, turning them into a constant factor: *thus 1/2 is the initial odds determined by our beliefs prior to the execution
+The initial odds or priors $\log{\frac{P(H)}{P(M)}}$ are treated in Naive Bayes as the normalized counts for each author / class. The authors make extensive analyses of the impact of these priors, see Section 4C in the paper and Section 3.1C in the book. And they conclude by setting the initial odds as equally probable, turning them into a constant factor: *thus 1/2 is the initial odds determined by our beliefs prior to the execution
 of the experiment*.
 
 
@@ -122,7 +122,7 @@ $$
 =x\log{\mu_H/\mu_M} - w(\mu_H-\mu_M) 
 $$
 
-Based on the *Naive* assumption that words appear independently in a text, and the authors decision to set the priors as equally probable ($P(H) = P(M) = 1/2$) the log-likelyhood ratio for all feature words of interest $\{x_1, ..., x_n\}$ becomes:
+Based on the *Naive* assumption that words appear independently in a text, and the authors decision to set the priors as equally probable ($P(H) = P(M) = 1/2$) the priora cancel out in the log-odds ratio and it is resuced to the log-likelyhood ratio for all feature words of interest $\{x_1, ..., x_n\}$ becomes:
 
 $$
 \text{decision} =  \log{\frac{P(x_1, ..., x_n | H)P(H)}{P(x_1, ..., x_n | M)P(M)}} \\
@@ -132,6 +132,8 @@ $$
 $$
 
 where $\mu_{H_i}$ and $\mu_{M_i}$ are estimated means of occurences / 1000 words for eaach individual word $i$.
+
+**decision** is a predictor that states the odds with which Hamilton is the author over Madison. This can be proven to be an optimal predictor that minimizes the empirical risk, and for a modern approach to this part, you may want to check [Chapter 1 of mlstory.org](https://www.mlstory.org/prediction.html).
 
 <!--
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
