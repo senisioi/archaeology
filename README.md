@@ -102,10 +102,10 @@ $$
 The logarithmic form of Bayes’ theorem can be obtained by taking the logarithm:
 
 $$
-\log{Odds(H, M | x)} =  \log{\frac{P(H)}{P(M)}} + \log{\frac{P(x | H)}{P(x | M)}}
+\log{Odds(H, M | x)} =  \log{\frac{P(H)}{P(M)}} * \log{\frac{P(x | H)}{P(x | M)}}
 $$
 
-The initial odds or priors $\log{\frac{P(H)}{P(M)}}$ are treated in Naive Bayes as the normalized counts for each author / class. The authors make extensive analyses of the impact of these priors, see Section 4C in the paper and Section 3.1C in the book. And they conclude by setting the initial odds as equally probable, turning them into a constant factor: *thus 1/2 is the initial odds determined by our beliefs prior to the execution
+The initial odds [priors] $\log{\frac{P(H)}{P(M)}}$ are treated in Naive Bayes as the normalized counts for each author / class. The authors make extensive analyses of the impact of these priors, see Section 4C in the paper and Section 3.1C in the book. And they conclude by setting the initial odds as equally probable, turning them into a constant factor: *thus 1/2 is the initial odds determined by our beliefs prior to the execution
 of the experiment*.
 
 
@@ -122,7 +122,7 @@ $$
 =x\log{\mu_H/\mu_M} - w(\mu_H-\mu_M) 
 $$
 
-Based on the *Naive* assumption that words appear independently in a text, and the authors decision to set the priors as equally probable ($P(H) = P(M) = 1/2$) the priora cancel out in the log-odds ratio and it is resuced to the log-likelyhood ratio for all feature words of interest $\{x_1, ..., x_n\}$ becomes:
+Based on the *Naive* assumption that words appear independently in a text, and the authors decision to set the priors as equally probable ($P(H) = P(M) = 1/2$) the log-likelyhood ratio for all feature words of interest $\{x_1, ..., x_n\}$ becomes:
 
 $$
 \text{decision} =  \log{\frac{P(x_1, ..., x_n | H)P(H)}{P(x_1, ..., x_n | M)P(M)}} \\
@@ -132,8 +132,6 @@ $$
 $$
 
 where $\mu_{H_i}$ and $\mu_{M_i}$ are estimated means of occurences / 1000 words for eaach individual word $i$.
-
-**decision** is a predictor that states the odds with which Hamilton is the author over Madison. This can be proven to be an optimal predictor that minimizes the empirical risk, and for a modern approach to this part, you may want to check [Chapter 1 of mlstory.org](https://www.mlstory.org/prediction.html).
 
 <!--
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -193,9 +191,12 @@ But in the study of the physical body, nobody would raise a question analogous t
 
 ---
 
-###  "The Game" Анатолій Дніпров (1961)
+###  The Game / Игра - Анатолій Дніпров (1961)
 
-[URL here](https://www.hardproblem.ru/en/posts/Events/a-russian-chinese-room-story-antedating-searle-s-1980-discussion/) short version on [wikipedia](https://en.wikipedia.org/wiki/Anatoly_Dneprov_(writer)#The_Game)
+<img src="https://live.staticflickr.com/8524/8673951753_3b3c36b33d_b.jpg" width="300">
+
+
+[URL here](https://www.hardproblem.ru/en/posts/Events/a-russian-chinese-room-story-antedating-searle-s-1980-discussion/) short version on [wikipedia](https://en.wikipedia.org/wiki/Anatoly_Dneprov_(writer)#The_Game), trilingual [PDF here](http://q-bits.org/images/Dneprov.pdf)
 
 A game on a stadium where people act according to mechanical and logical instructions to produce a translation from Portuguese.
 
@@ -221,11 +222,54 @@ Golovin stopped short and sat down.
 
 “If you, being structural elements of some logical pattern, had no idea of what you were doing, then can we really argue about the ‘thoughts’ of electronic devices made of different parts which are deemed incapable of any thinking even by the most fervent followers of the electronic-brain concept? You know all these parts: radio tubes, semiconductors, magnetic matrixes, etc. I think our game gave us the right answer to the question ‘Can machines think?’ We’ve proven that even the most perfect simulation of machine thinking is not the thinking process itself, which is a higher form of motion of living matter. And this is where I can declare the Congress adjourned.”
 
-- [The Thinking Machine Video](https://www.youtube.com/watch?v=cvOTKFXpvKA)
 
+---
+
+### Thinkin Machine  Dehumanizing Women
+
+- [The Thinking Machine](https://www.youtube.com/watch?v=cvOTKFXpvKA) documentary from the '60s where the is moderator smoking a pipe nonchalantly.
+
+I ask you to watch **who** are the people doing the actual research. Worth noting [minute 10:31](https://youtu.be/cvOTKFXpvKA?feature=shared&t=631) where a woman is being tested. To understand why, see the recent [Pygmalion displacement paper](https://osf.io/preprints/socarxiv/jqxb6) by Lelia A. Erscoi, Annelies Kleinherenbrink, and Olivia Guest. Short excerpts below:
+
+First, we examine the fictional fascination with AI, or minimally AI-like entities, e.g. automata, which are created with the explicit purpose to displace women by recreating artificially their typical social role (examples shown on the left and in pink in Figure 2). 
+
+In the section titled Fictional Timeline, we trace the ways in which the misogyny expressed in the original telling of the Pygmalion myth has been echoed and transmuted over time, culminating in films like “Ex Machina” and “Her” in the 21st century. 
+
+We follow up this analysis of Pygmalion-inspired fiction with a discussion of the work of Alan Turing, in the section titled Interlude: **Can Women Think?**. Even though the Turing test is now widely understood to involve a machine being mistaken for a human — any human — the original test re volved around a computer being mistaken specifically for a woman (Genova, 1994). 
+
+We therefore argue that Turing’s thought experiment can be seen as a case of Pygmalion displacement (i.e. the humanization of AI through the dehumanization of women). As such, it serves as a noteworthy bridge between fictional and actual attempts to replace women with machines. After this ‘interlude’, we develop our Pygmalion lens (Table 1), which is described in detail in the section titled The Pygmalion lens: real myths or mythical realities?.
+
+
+In a further twist of dramatic irony, as we already alluded to above, the original Turing test is another instance of Pygmalion displacement. Turing introduces his original formulation of the test by means of “a game which we call the ‘imitation game’. 
+
+It is played with three people, a man (A), a woman (B), and an interrogator (C) who may be of either sex. [...] The object of the game for the third player (B) is to help the interrogator. The best strategy for her is probably to give truthful answers. She can add such things as ‘I am the woman, don’t listen to him!’ to her answers, but it will avail nothing as the man can make similar remarks.” (pp. 433–434) Turing (1950) then asks “‘What will happen when a machine takes the part of A [the man] in this game?’ Will the interrogator decide wrongly as often when the game is played like this as he does when the game is played between
+a man and a woman? These questions replace our original, **Can machines think?** (p. 434)
+
+This description of the second test leaves some room for interpretation (Brahnam et al., 2011). The majority of interpretations suggest that Turing intends this second game as a test of human-likeness, in general, not of gender specifically (cf. Guest & Martin, 2023, wherein related but separate problems with adopting the test uncritically in the scientific study of brain and cognition are discussed). 
+
+[...]
+
+Turing invites us to accept that to convince the interrogator of their humanity, human-likeness, or both, machine and woman could answer questions that probe things like their ability to play masculinised games like chess (viz. Keith, 1994), but not patriarchal female-coded characteristics. “We do not wish to penalise the machine for its inability to shine in beauty competitions” [(Turing, 1950, p. 435)](https://academic.oup.com/mind/article/LIX/236/433/986238).
+
+In an alternative reading, however, the judge is still tasked with figuring out which player is a woman, and the computer is programmed specifically to prove it is a woman (Genova, 1994; Kind, 2022). “Turing actually said that the method of the test was by imitating gender[, thus] the function to be performed [by the machine] is the imitation of a female person” (Keith, 1994, p. 334).
+
+If this was indeed Turing’s intention, the computer imitates a man imitating (and outsmarting) a woman, and thus still emulates masculine thinking (Brahnam et al., 2011). In both understandings of the test, the machine is arguably not required to be exactly like women (defined in terms of stereotypes), in fact it has to surpass them by reproducing masculine thinking skills (again, stereotypically defined).
+
+
+---
 
 ### The language system in the human brain: Parallels & Differences with LLMs - Ev Fedorenko
 
+The neuroscience of perception has recently been revolutionized with an integrative modeling approach in which computation, brain function, and behavior are linked across many datasets and many computational models. By revealing trends across models, this approach yields novel insights into cognitive and neural mechanisms in the target domain. We here present a systematic study taking this approach to higher-level cognition: human language processing, our species’ signature cognitive skill. We find that the most powerful “transformer” models predict nearly 100% of explainable variance in neural responses to sentences and generalize across different datasets and imaging modalities (functional MRI and electrocorticography). Models’ neural fits (“brain score”) and fits to behavioral responses are both strongly correlated with model accuracy on the next-word prediction task (but not other language tasks). Model architecture appears to substantially contribute to neural fit. These results provide computationally explicit evidence that predictive processing fundamentally shapes the language comprehension mechanisms in the human brain.
+
+
+To evaluate model candidates of mechanisms, we use previously published human recordings: fMRI activations to short passages (Pereira et al., 2018), ECoG recordings to single words in diverse sentences (Fedorenko et al., 2016), fMRI to story fragments (Blank et al. 2014). More specifically, we present the same stimuli to models that were presented to humans and “record” model activations. We then compute a correlation score of how well the model recordings can predict human recordings with a regression fit on a subset of the stimuli.
+Since we also want to figure out how close model predictions are to the internal reliability of the data, we extrapolate a ceiling of how well an “infinite number of subjects” could predict individual subjects in the data. Scores are normalized by this estimated ceiling.
+
+So how well do models actually predict our recordings? We tested 43 diverse language models, incl. embedding, recurrent, and transformer models. Specific models (GPT2-xl) predict some of the data near perfectly, and consistently across datasets. Embeddings like GloVe do not.
+The scores of models are further predicted by the task performance of models to predict the next word on the WikiText-2 language modeling dataset (evaluated as perplexity, lower is better) – but NOT by task performance on any of the GLUE benchmarks. 
+
+- from the original 2021 [paper](https://mschrimpf.altervista.org/artificial-neural-networks-accurately-predict-language-processing-in-the-brain/)
 - [Highly recommended presentation](https://www.youtube.com/watch?v=uE9AiYuCwdE) by Ev Fedorenko
 
 
