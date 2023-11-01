@@ -30,6 +30,8 @@ Frank Rosenblatt
 - [Algorithmic Theories of Everything](https://arxiv.org/abs/quant-ph/0011122), Jürgen Schmidhuber
 - [Theory of Self-Reproducing Automata](https://cba.mit.edu/events/03.11.ASE/docs/VonNeumann.pdf), John von Neumann
 
+---
+---
 
 ## Exploratory Data Analysis, Federalist Papers, and Bayesian Inference
 
@@ -145,4 +147,83 @@ where $\mu_{H_i}$ and $\mu_{M_i}$ are estimated means of occurences / 1000 words
 
 
 [^1]: *even a motherly eye*? worth noting a random sexist remark in an academic paper of the '60s
+
+
+---
+---
+
+
+## Is Language Related to Thought? Are Machines Able to Think?
+
+This is part of a wider philosophical regarding language and cognition. We shall only lift up the dust from these debates and point to the most lowdly-heard opinions.
+
+---
+
+### L. Wittgenstein
+
+<img src="https://api.architectuul.org/media/54eb15b4-9e1c-4ec7-b0de-76f16d7b5e1b/1600x900.jpg" width="300">
+
+
+*A înţelege o propoziţie înseamnă a înţelege un limbaj.
+A înţelege un limbaj înseamnă a stăpîni o tehnică.
+Cum explic eu cuiva semnificaţia cuvintelor "regulat", "uniform", "acelaşi"?
+Unuia care, să zicem, nu vorbeşte decât franceză, îi voi explica aceste cuvinte prin cuvintele franţuzeşti corespunzătoare. Dar cine nu posedă încă aceste noţiuni, pe acela îl voi învăţa să folosească cuvintele prin exemple şi prin exerciţiu.
+Şi cînd fac asta, nu-i comunic mai puţin decît ştiu eu însumi.* Wittgenstein, Cercetări Filozofice
+
+[Short summary of his work](https://plato.stanford.edu/entries/wittgenstein/#MeanUse):
+
+“For a large class of cases of the employment of the word ‘meaning’—though not for all—this word can be explained in this way: the meaning of a word is its use in the language” (PI 43). This basic statement is what underlies the change of perspective most typical of the later phase of Wittgenstein’s thought: a change from a conception of meaning as representation to a view which looks to use as the crux of the investigation. Traditional theories of meaning in the history of philosophy were intent on pointing to something exterior to the proposition which endows it with sense. This ‘something’ could generally be located either in an objective space, or inside the mind as mental representation. As early as 1933 (The Blue Book) Wittgenstein took pains to challenge these conceptions, arriving at the insight that “if we had to name anything which is the life of the sign, we should have to say that it was its use” (BB 4). 
+
+--- 
+
+### N. Chomsky - The Psychology of Language and Thought
+[URL here](https://chomsky.info/1983____/)
+
+<img src="https://i.pinimg.com/originals/8b/63/61/8b6361373652c10fdfe45486f8fa6e25.jpg" width="300">
+
+QUESTION: What role does cognition play in the acquisition and development of language? Do linguistic factors influence general cognitive development?
+
+CHOMSKY: I would like to re-phrase the first question and ask what role other aspects of cognition play in the acquisition of language since, as put, it is not a question I can answer. I would want to regard language as one aspect of cognition and its development as one aspect of the development of cognition. It seems to me that what we can say in general is this:
+
+There are a number of cognitive systems which seem to have quite distinct and specific properties. These systems provide the basis for certain cognitive capacities — for simplicity of exposition, I will ignore the distinction and speak a bit misleadingly about cognitive capacities. The language faculty is one of these cognitive systems. There are others. For example, our capacity to organize visual space, or to deal with abstract properties of the number system, or to comprehend and appreciate certain kinds of musical creation, or our ability to make sense of the social structures in which we play a role, which undoubtedly reflects conceptual structures that have developed in the mind, and any number of other mental capacities. As far as I can see, to the extent that we understand anything about these capacities, they appear to have quite specific and unique properties. That is, I don’t see any obvious relationship between, for example, the basic properties of the structure of language as represented in the mind on the one hand and the properties of our capacity, say, to recognize faces or understand some situation in which we play a role, or appreciate music and so on. These seem to be quite different and unique in their characteristics. Furthermore, every one of these mental capacities appears to be highly articulated as well as specifically structured. Now it’s perfectly reasonable to ask how the development of one of these various systems relates to the development of others. Similarly, in the study of, say, the physical growth of the body, it makes perfect sense to ask how the development of one system relates to the development of others. Let’s say, how the development of the circulatory system relates to the development of the visual system.
+
+But in the study of the physical body, nobody would raise a question analogous to the one you posed in quite this form. That is, we we would not ask what role physical organs and their function play in the development of the visual system. Undoubtedly, there are relations between, say, the visual and circulatory systems, but the way we approach the problem of growth and development in the physical body is rather different. That is, one asks — quite properly — what are the specific properties and characteristics of the various systems that emerge — how do these various organs or systems interact with one another, what is the biological basis — the genetic coding, ultimately — that determines the specific pattern of growth, function and interaction of these highly articulated systems: for instance, the circulatory system, the visual system, the liver, and so on. And that seems to provide a reasonable analogy, as a point of departure at least, for the study of cognitive development and cognitive structure, including the growth of the language faculty as a special case.
+
+---
+
+###  "The Game" Анатолій Дніпров (1961)
+
+[URL here](https://www.hardproblem.ru/en/posts/Events/a-russian-chinese-room-story-antedating-searle-s-1980-discussion/) short version on [wikipedia](https://en.wikipedia.org/wiki/Anatoly_Dneprov_(writer)#The_Game)
+
+A game on a stadium where people act according to mechanical and logical instructions to produce a translation from Portuguese.
+
+"Outcries and laughter filled the hall for quite a while. Zarubin laughed with us. Then he shook his notebook in the air and, when the hall was silent again, he read slowly:
+“Os maiores resultados sao produzidos роr – pequenos mas continues esforcos”.
+
+This is a sentence in Portuguese. I don’t think you can guess what it means. However, it was you who yesterday made a perfect Russian translation. Here it is: “The greatest goals are achieved through minor but continuous ekkedt.”
+
+
+“Remember that part of Turing’s article in which he said that to find out whether machines are able to think, you have to become a machine. Experts in cybernetics believe that the only way to prove that machines can think is to turn yourself into a machine and examine your thinking process.
+
+Hence, yesterday we spent four hours operating like a machine. Not a fictional one, but a serial, domestic machine named Ural. If we had more people, we could have worked as Strela, Large Electronic Computing Machine, or any other computing machine. I decided to try Ural and used you, my dear young friends, as elements to build it at the stadium. I prepared a program to translate Portuguese texts, did the encoding procedure, and placed it into the “memory unit” – the Georgian delegation. I gave the grammatical rules to our Ukrainian colleagues, and the Russian team was responsible for the dictionary.
+
+Our machine handled the mission flawlessly, as the translation of the foreign sentence into Russian required absolutely no thinking. You definitely understand that such a living machine could solve any mathematical or logical problem just like state-of-the-art electronic computing machines. However, that would require much more time. And now let us try to answer one of the most critical questions of cybernetics: Can machines think?”
+
+“No!” everyone roared.
+
+“I object!” yelled our “cybernetics nut,” Anton Golovin. “During the game we acted like individual switches or neurons. And nobody ever said that every single neuron has its own thoughts. A thought is the joint product of numerous neurons!”
+
+“Okay,” the Professor agreed. “Then we have to assume that during the game the air was stuffed with some ‘machine superthoughts’ unknown to and inconceivable by the machine’s thinking elements! Something like Hegel’s noûs, right?”
+
+Golovin stopped short and sat down.
+
+“If you, being structural elements of some logical pattern, had no idea of what you were doing, then can we really argue about the ‘thoughts’ of electronic devices made of different parts which are deemed incapable of any thinking even by the most fervent followers of the electronic-brain concept? You know all these parts: radio tubes, semiconductors, magnetic matrixes, etc. I think our game gave us the right answer to the question ‘Can machines think?’ We’ve proven that even the most perfect simulation of machine thinking is not the thinking process itself, which is a higher form of motion of living matter. And this is where I can declare the Congress adjourned.”
+
+- [The Thinking Machine Video](https://www.youtube.com/watch?v=cvOTKFXpvKA)
+
+
+### The language system in the human brain: Parallels & Differences with LLMs - Ev Fedorenko
+
+- [Highly recommended presentation](https://www.youtube.com/watch?v=uE9AiYuCwdE) by Ev Fedorenko
+
 
