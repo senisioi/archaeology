@@ -161,11 +161,11 @@ where $\mu_{H_i}$ and $\mu_{M_i}$ are estimated means of occurences / 1000 words
 ### References
 <a name="eda_refs"></a> 
 
-- [Understanding of Multinomial Naive Bayes for Text Classification](https://web.stanford.edu/~jurafsky/slp3/4.pdf)
-[Chapter 8 for Discrimination Problems](https://archive.org/details/advancedstatisti00raoc) 
-- [Jeffries, Bayesian statistics](https://archive.org/details/in.ernet.dli.2015.2608/page/n129/mode/2up)
-- [Bayesian statistics, Raiffa and Schlaifer](https://gwern.net/doc/statistics/decision/1961-raiffa-appliedstatisticaldecisiontheory.pdf)
-- [Bayesian statistics, Savage](https://gwern.net/doc/statistics/decision/1972-savage-foundationsofstatistics.pdf)
+- [Understanding of Multinomial Naive Bayes for Text Classification](https://web.stanford.edu/~jurafsky/slp3/4.pdf), Jurafsky and Martin
+- [Chapter 8 - Discrimination Problems](https://archive.org/details/advancedstatisti00raoc), Radhakrishna Rao 
+- [Bayesian statistics](https://archive.org/details/in.ernet.dli.2015.2608/page/n129/mode/2up), Jeffries
+- [Bayesian statistics](https://gwern.net/doc/statistics/decision/1961-raiffa-appliedstatisticaldecisiontheory.pdf), Raiffa and Schlaifer
+- [Bayesian statistics](https://gwern.net/doc/statistics/decision/1972-savage-foundationsofstatistics.pdf), Savage
 
 
 
@@ -259,15 +259,16 @@ Golovin stopped short and sat down.
 
 <img width="600" src="https://github.com/senisioi/archaeology/blob/main/img/pygmalion_ErscoiKleinherenbrinkGuest2023.png?raw=true">
 
+- image from [Pygmalion displacement paper](https://osf.io/preprints/socarxiv/jqxb6)
 - [The Thinking Machine](https://www.youtube.com/watch?v=cvOTKFXpvKA) documentary from the '60s where the is moderator smoking a pipe nonchalantly.
 
-I ask you to watch **who** are the people doing the actual research. Worth noting [minute 10:31](https://youtu.be/cvOTKFXpvKA?feature=shared&t=631) where somebody is being tested[^2]. To understand why, see the recent [Pygmalion displacement paper](https://osf.io/preprints/socarxiv/jqxb6) by Lelia A. Erscoi, Annelies Kleinherenbrink, and Olivia Guest. Short excerpts below:
+I ask you to watch **who** are the people doing the actual research. Worth noting [minute 10:31](https://youtu.be/cvOTKFXpvKA?feature=shared&t=631) where somebody is being tested[^2]. To understand more about the context, see the recent [Pygmalion displacement paper](https://osf.io/preprints/socarxiv/jqxb6) by Lelia A. Erscoi, Annelies Kleinherenbrink, and Olivia Guest. Short excerpts below:
 
 First, we examine the fictional fascination with AI, or minimally AI-like entities, e.g. automata, which are created with the explicit purpose to displace women by recreating artificially their typical social role (examples shown on the left and in pink in Figure 2). 
 
 In the section titled Fictional Timeline, we trace the ways in which the misogyny expressed in the original telling of the Pygmalion myth has been echoed and transmuted over time, culminating in films like “Ex Machina” and “Her” in the 21st century. 
 
-We follow up this analysis of Pygmalion-inspired fiction with a discussion of the work of Alan Turing, in the section titled Interlude: **Can Women Think?**. Even though the Turing test is now widely understood to involve a machine being mistaken for a human — any human — the original test re volved around a computer being mistaken specifically for a woman (Genova, 1994). 
+We follow up this analysis of Pygmalion-inspired fiction with a discussion of the work of Alan Turing[^3], in the section titled Interlude: **Can Women Think?**. Even though the Turing test is now widely understood to involve a machine being mistaken for a human — any human — the original test re volved around a computer being mistaken specifically for a woman (Genova, 1994). 
 
 We therefore argue that Turing’s thought experiment can be seen as a case of Pygmalion displacement (i.e. the humanization of AI through the dehumanization of women). As such, it serves as a noteworthy bridge between fictional and actual attempts to replace women with machines. After this ‘interlude’, we develop our Pygmalion lens (Table 1), which is described in detail in the section titled The Pygmalion lens: real myths or mythical realities?.
 
@@ -316,6 +317,7 @@ The scores of models are further predicted by the task performance of models to 
 <a name="thought_refs"></a> 
 
 
+- [Automating Gender: Postmodern Feminism in the Age of the Intelligent Machine](https://www.jstor.org/stable/3178281), Judith Halberstam
 - [Pygmalion Displacement: When Humanising AI Dehumanises Women](https://doi.org/10.31235/osf.io/jqxb6), Erscoi, L., Kleinherenbrink, A., & Guest, O.
 - [Language Is a Poor Heuristic For Intelligence](https://karawynn.substack.com/p/language-is-a-poor-heuristic-for), Karawynn Long
 - [Reclaiming AI as a theoretical tool for cognitive science](https://doi.org/10.31234/osf.io/4cbuv), van Rooij, I., Guest, O., Adolfi, F. G., de Haan, R., Kolokolova, A., & Rich, P.
@@ -332,3 +334,5 @@ The scores of models are further predicted by the task performance of models to 
 [^1]: *even a motherly eye*? worth noting a random sexist remark in an academic paper of the '60s
 
 [^2]: ask youreself who is being tested and what game is being used. The river crossing problem is rooted in a history of [sexism, racism, and colonialism](https://pballew.blogspot.com/2022/09/a-brief-history-of-river-crossing.html). What were the missionaries doing there anyways?
+
+[^3]: Alan Turing has been infamously [persecuted for being LGBTQ+](https://www.thepinknews.com/2023/06/06/alan-turing-gay-who-was-did-eingma-die-death-facts/); also Wittgenstein was [allegedly queer](https://www.newyorker.com/magazine/2022/05/16/how-queer-was-ludwig-wittgenstein) and [strongly mysoginistic](https://www.nordicwittgensteinreview.com/article/view/3651/9)
