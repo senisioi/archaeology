@@ -1,7 +1,18 @@
 # Archaeology of Intelligent Machines
 
+## Table of Contents
 
-## Introductory course
+- [Introductory Course](#introductory-course)
+- [Exploratory Data Analysis, Federalist Papers, and Bayesian Inference](#exploratory-data-analysis-federalist-papers-and-bayesian-inference)
+- [Is Language Related to Thought? Are Machines Able to Think?](#is-language-related-to-thought-are-machines-able-to-think)
+    - [Wittgenstein and Language](#l-wittgenstein)
+    - [Chomsky on Language and Cognition](#n-chomsky---the-psychology-of-language-and-thought)
+    - [The Game / Игра - Анатолій Дніпров (1961)](#the-game--игра---анатолій-дніпров-1961)
+    - [Thinkin Machine Dehumanizing Women](#thinkin-machine--dehumanizing-women)
+    - [The Language System in the Human Brain](#the-language-system-in-the-human-brain-parallels--differences-with-llms---ev-fedorenko)
+
+
+## Introductory Course
 
 - [Three Thousand Years of Algorithmic Rituals: The Emergence of AI from the Computation of Space](https://www.e-flux.com/journal/101/273221/three-thousand-years-of-algorithmic-rituals-the-emergence-of-ai-from-the-computation-of-space/), Matteo Pasquinelli 
 
@@ -224,7 +235,7 @@ Golovin stopped short and sat down.
 
 ---
 
-### Thinkin Machine  Dehumanizing Women
+### Thinking Machine Dehumanizing Women
 
 <img width="600" src="https://github.com/senisioi/archaeology/blob/main/img/pygmalion_ErscoiKleinherenbrinkGuest2023.png?raw=true">
 
@@ -259,7 +270,7 @@ If this was indeed Turing’s intention, the computer imitates a man imitating (
 
 ---
 
-### The language system in the human brain: Parallels & Differences with LLMs - Ev Fedorenko
+### The Language System in the Human Brain: Parallels & Differences with LLMs
 
 <img width="600" src="https://github.com/senisioi/archaeology/blob/main/img/schrimpf_et_al_2021.png?raw=true">
 
@@ -276,9 +287,19 @@ The scores of models are further predicted by the task performance of models to 
 - from the original 2021 [paper](https://mschrimpf.altervista.org/artificial-neural-networks-accurately-predict-language-processing-in-the-brain/)
 - [Highly recommended presentation](https://www.youtube.com/watch?v=uE9AiYuCwdE) by Ev Fedorenko
 
+---
+ 
+### References 
 
 
-
+- [Pygmalion Displacement: When Humanising AI Dehumanises Women](https://doi.org/10.31235/osf.io/jqxb6), Erscoi, L., Kleinherenbrink, A., & Guest, O.
+- [Language Is a Poor Heuristic For Intelligence](https://karawynn.substack.com/p/language-is-a-poor-heuristic-for), Karawynn Long
+- [Reclaiming AI as a theoretical tool for cognitive science](https://doi.org/10.31234/osf.io/4cbuv), van Rooij, I., Guest, O., Adolfi, F. G., de Haan, R., Kolokolova, A., & Rich, P.
+- [The neural architecture of language: Integrative modeling converges on predictive processing](https://evlab.mit.edu/assets/papers/Schrimpf_et_al_2021_PNAS.pdf), Schrimpf, M., Blank, I., Tuckute, G., Kauf, C., Hosseini, E., Kanwisher, N., Tenenbaum, J.^ & Fedorenko, E;
+- [Other Papers from the Brain and Language Lab](https://evlab.mit.edu/research/index.html)
+- [On Chomsky and the Two Cultures of Statistical Learning](http://norvig.com/chomsky.html), debate with P. Norvig
+- [Does a language model trained on “A is B” generalize to “B is A”?](https://arxiv.org/abs/2309.12288), Lukas Berglund, Meg Tong, Max Kaufmann, Mikita Balesni, Asa Cooper Stickland, Tomasz Korbak, Owain Evans
+- [Unthought: the power of the cognitive nonconscious](https://ageingcompanions.constantvzw.org/books/Unthought_N._Katherine_Hayles.pdf), Katherine Hayles
 
 
 
