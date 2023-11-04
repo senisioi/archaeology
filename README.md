@@ -5,7 +5,7 @@
 
 - [Three Thousand Years of Algorithmic Rituals: The Emergence of AI from the Computation of Space](https://www.e-flux.com/journal/101/273221/three-thousand-years-of-algorithmic-rituals-the-emergence-of-ai-from-the-computation-of-space/), Matteo Pasquinelli 
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Gospers_glider_gun.gif"  width="400">
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Gospers_glider_gun.gif"  width="600">
 
 - Excerpt:
 
@@ -37,7 +37,7 @@ Frank Rosenblatt
 
 - [Inference in an Authorship Problem](https://ptrckprry.com/course/ssd/reading/Most63.pdf), Frederick Mosteller and David L. Wallace
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Poisson_pmf.svg/1280px-Poisson_pmf.svg.png"  width="400">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Poisson_pmf.svg/1280px-Poisson_pmf.svg.png"  width="600">
 
 Excerpts:
 
@@ -146,7 +146,6 @@ where $\mu_{H_i}$ and $\mu_{M_i}$ are estimated means of occurences / 1000 words
 - [Bayesian statistics, Savage](https://gwern.net/doc/statistics/decision/1972-savage-foundationsofstatistics.pdf)
 
 
-[^1]: *even a motherly eye*? worth noting a random sexist remark in an academic paper of the '60s
 
 
 ---
@@ -161,7 +160,7 @@ This is part of a wider philosophical regarding language and cognition. We shall
 
 ### L. Wittgenstein
 
-<img src="https://api.architectuul.org/media/54eb15b4-9e1c-4ec7-b0de-76f16d7b5e1b/1600x900.jpg" width="300">
+<img src="https://api.architectuul.org/media/54eb15b4-9e1c-4ec7-b0de-76f16d7b5e1b/1600x900.jpg" width="600">
 
 
 *A înţelege o propoziţie înseamnă a înţelege un limbaj.
@@ -179,7 +178,7 @@ Unuia care, să zicem, nu vorbeşte decât franceză, îi voi explica aceste cuv
 ### N. Chomsky - The Psychology of Language and Thought
 [URL here](https://chomsky.info/1983____/)
 
-<img src="https://i.pinimg.com/originals/8b/63/61/8b6361373652c10fdfe45486f8fa6e25.jpg" width="300">
+<img src="https://i.pinimg.com/originals/8b/63/61/8b6361373652c10fdfe45486f8fa6e25.jpg" width="600">
 
 QUESTION: What role does cognition play in the acquisition and development of language? Do linguistic factors influence general cognitive development?
 
@@ -193,7 +192,7 @@ But in the study of the physical body, nobody would raise a question analogous t
 
 ###  The Game / Игра - Анатолій Дніпров (1961)
 
-<img src="https://live.staticflickr.com/8524/8673951753_3b3c36b33d_b.jpg" width="300">
+<img width="600" src="https://github.com/senisioi/archaeology/blob/main/img/igra.png?raw=true">
 
 
 [URL here](https://www.hardproblem.ru/en/posts/Events/a-russian-chinese-room-story-antedating-searle-s-1980-discussion/) short version on [wikipedia](https://en.wikipedia.org/wiki/Anatoly_Dneprov_(writer)#The_Game), trilingual [PDF here](http://q-bits.org/images/Dneprov.pdf)
@@ -227,9 +226,11 @@ Golovin stopped short and sat down.
 
 ### Thinkin Machine  Dehumanizing Women
 
+<img width="600" src="https://github.com/senisioi/archaeology/blob/main/img/pygmalion_ErscoiKleinherenbrinkGuest2023.png?raw=true">
+
 - [The Thinking Machine](https://www.youtube.com/watch?v=cvOTKFXpvKA) documentary from the '60s where the is moderator smoking a pipe nonchalantly.
 
-I ask you to watch **who** are the people doing the actual research. Worth noting [minute 10:31](https://youtu.be/cvOTKFXpvKA?feature=shared&t=631) where a woman is being tested. To understand why, see the recent [Pygmalion displacement paper](https://osf.io/preprints/socarxiv/jqxb6) by Lelia A. Erscoi, Annelies Kleinherenbrink, and Olivia Guest. Short excerpts below:
+I ask you to watch **who** are the people doing the actual research. Worth noting [minute 10:31](https://youtu.be/cvOTKFXpvKA?feature=shared&t=631) where somebody is being tested[^2]. To understand why, see the recent [Pygmalion displacement paper](https://osf.io/preprints/socarxiv/jqxb6) by Lelia A. Erscoi, Annelies Kleinherenbrink, and Olivia Guest. Short excerpts below:
 
 First, we examine the fictional fascination with AI, or minimally AI-like entities, e.g. automata, which are created with the explicit purpose to displace women by recreating artificially their typical social role (examples shown on the left and in pink in Figure 2). 
 
@@ -260,6 +261,9 @@ If this was indeed Turing’s intention, the computer imitates a man imitating (
 
 ### The language system in the human brain: Parallels & Differences with LLMs - Ev Fedorenko
 
+<img width="600" src="https://github.com/senisioi/archaeology/blob/main/img/schrimpf_et_al_2021.png?raw=true">
+
+
 The neuroscience of perception has recently been revolutionized with an integrative modeling approach in which computation, brain function, and behavior are linked across many datasets and many computational models. By revealing trends across models, this approach yields novel insights into cognitive and neural mechanisms in the target domain. We here present a systematic study taking this approach to higher-level cognition: human language processing, our species’ signature cognitive skill. We find that the most powerful “transformer” models predict nearly 100% of explainable variance in neural responses to sentences and generalize across different datasets and imaging modalities (functional MRI and electrocorticography). Models’ neural fits (“brain score”) and fits to behavioral responses are both strongly correlated with model accuracy on the next-word prediction task (but not other language tasks). Model architecture appears to substantially contribute to neural fit. These results provide computationally explicit evidence that predictive processing fundamentally shapes the language comprehension mechanisms in the human brain.
 
 
@@ -273,3 +277,13 @@ The scores of models are further predicted by the task performance of models to 
 - [Highly recommended presentation](https://www.youtube.com/watch?v=uE9AiYuCwdE) by Ev Fedorenko
 
 
+
+
+
+
+
+
+
+[^1]: *even a motherly eye*? worth noting a random sexist remark in an academic paper of the '60s
+
+[^2]: ask youreself who is being tested and what game is being used. The river crossing problem is rooted in a history of [sexism, racism, and colonialism](https://pballew.blogspot.com/2022/09/a-brief-history-of-river-crossing.html). What were the missionaries doing there anyways?
