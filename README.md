@@ -2,17 +2,22 @@
 
 ## Table of Contents
 
-- [Introductory Course](#introductory-course)
-- [Exploratory Data Analysis, Federalist Papers, and Bayesian Inference](#exploratory-data-analysis-federalist-papers-and-bayesian-inference)
-- [Is Language Related to Thought? Are Machines Able to Think?](#is-language-related-to-thought-are-machines-able-to-think)
-    - [Wittgenstein and Language](#l-wittgenstein)
-    - [Chomsky on Language and Cognition](#n-chomsky---the-psychology-of-language-and-thought)
-    - [The Game / Игра - Анатолій Дніпров (1961)](#the-game--игра---анатолій-дніпров-1961)
-    - [Thinkin Machine Dehumanizing Women](#thinkin-machine--dehumanizing-women)
-    - [The Language System in the Human Brain](#the-language-system-in-the-human-brain-parallels--differences-with-llms---ev-fedorenko)
+- [Introductory Course](#intro)
+    - [References](#intro_refs)
+- [Exploratory Data Analysis, Federalist Papers, and Bayesian Inference](#eda)
+    - [References](#eda_refs)
+- [Is Language Related to Thought? Are Machines Able to Think?](#thought)
+    - [Wittgenstein and Language](#thought_witt)
+    - [Chomsky on Language and Cognition](#thought_chomsky)
+    - [The Game / Игра - Анатолій Дніпров (1961)](#thought_game)
+    - [Thinkin Machine Dehumanizing Women](#thought_sexism)
+    - [The Language System in the Human Brain](#thought_LLMs)
+    - [References](#thought_refs)
+
 
 
 ## Introductory Course
+<a name="intro"></a> 
 
 - [Three Thousand Years of Algorithmic Rituals: The Emergence of AI from the Computation of Space](https://www.e-flux.com/journal/101/273221/three-thousand-years-of-algorithmic-rituals-the-emergence-of-ai-from-the-computation-of-space/), Matteo Pasquinelli 
 
@@ -33,7 +38,10 @@ Looking at ancient practices such as the Agnicayana ritual and the Hindu rules f
 Today, amidst the expanding capacities of AI, there is a tendency to perceive algorithms as an application or imposition of abstract mathematical ideas upon concrete data. On the contrary, the genealogy of the algorithm shows that its form has emerged from material practices, from a mundane division of space, time, labor, and social relations. 
 
 
-#### References
+
+### References
+<a name="intro_refs"></a> 
+
 - [Language, Cohesion and Form (Studies in Natural Language Processing)](http://libgen.rs/book/index.php?md5=4EBE0188B1C9E63E3293BB70918F8C5A), Margaret Masterman, Yorick Wilks    
 - [The Perceptron](https://blogs.umass.edu/brain-wars/files/2016/03/rosenblatt-1957.pdf), 
 Frank Rosenblatt
@@ -45,6 +53,7 @@ Frank Rosenblatt
 ---
 
 ## Exploratory Data Analysis, Federalist Papers, and Bayesian Inference
+<a name="eda"></a> 
 
 - [Inference in an Authorship Problem](https://ptrckprry.com/course/ssd/reading/Most63.pdf), Frederick Mosteller and David L. Wallace
 
@@ -149,7 +158,9 @@ where $\mu_{H_i}$ and $\mu_{M_i}$ are estimated means of occurences / 1000 words
 -->
 
 
-#### References
+### References
+<a name="eda_refs"></a> 
+
 - [Understanding of Multinomial Naive Bayes for Text Classification](https://web.stanford.edu/~jurafsky/slp3/4.pdf)
 [Chapter 8 for Discrimination Problems](https://archive.org/details/advancedstatisti00raoc) 
 - [Jeffries, Bayesian statistics](https://archive.org/details/in.ernet.dli.2015.2608/page/n129/mode/2up)
@@ -164,12 +175,15 @@ where $\mu_{H_i}$ and $\mu_{M_i}$ are estimated means of occurences / 1000 words
 
 
 ## Is Language Related to Thought? Are Machines Able to Think?
+<a name="thought"></a> 
+
 
 This is part of a wider philosophical regarding language and cognition. We shall only lift up the dust from these debates and point to the most lowdly-heard opinions.
 
 ---
 
 ### L. Wittgenstein
+<a name="thought_witt"></a> 
 
 <img src="https://api.architectuul.org/media/54eb15b4-9e1c-4ec7-b0de-76f16d7b5e1b/1600x900.jpg" width="600">
 
@@ -187,6 +201,8 @@ Unuia care, să zicem, nu vorbeşte decât franceză, îi voi explica aceste cuv
 --- 
 
 ### N. Chomsky - The Psychology of Language and Thought
+<a name="thought_chomsky"></a> 
+
 [URL here](https://chomsky.info/1983____/)
 
 <img src="https://i.pinimg.com/originals/8b/63/61/8b6361373652c10fdfe45486f8fa6e25.jpg" width="600">
@@ -202,6 +218,8 @@ But in the study of the physical body, nobody would raise a question analogous t
 ---
 
 ###  The Game / Игра - Анатолій Дніпров (1961)
+<a name="thought_game"></a> 
+
 
 <img width="600" src="https://github.com/senisioi/archaeology/blob/main/img/igra.png?raw=true">
 
@@ -236,6 +254,8 @@ Golovin stopped short and sat down.
 ---
 
 ### Thinking Machine Dehumanizing Women
+<a name="thought_sexism"></a> 
+
 
 <img width="600" src="https://github.com/senisioi/archaeology/blob/main/img/pygmalion_ErscoiKleinherenbrinkGuest2023.png?raw=true">
 
@@ -271,6 +291,9 @@ If this was indeed Turing’s intention, the computer imitates a man imitating (
 ---
 
 ### The Language System in the Human Brain: Parallels & Differences with LLMs
+<a name="thought_LLMs"></a> 
+
+
 
 <img width="600" src="https://github.com/senisioi/archaeology/blob/main/img/schrimpf_et_al_2021.png?raw=true">
 
@@ -290,6 +313,7 @@ The scores of models are further predicted by the task performance of models to 
 ---
  
 ### References 
+<a name="thought_refs"></a> 
 
 
 - [Pygmalion Displacement: When Humanising AI Dehumanises Women](https://doi.org/10.31235/osf.io/jqxb6), Erscoi, L., Kleinherenbrink, A., & Guest, O.
