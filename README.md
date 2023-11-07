@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [Project Ideas](#ideas)
 - [Introductory Course](#intro)
     - [References](#intro_refs)
 - [Exploratory Data Analysis, Federalist Papers, and Bayesian Inference](#eda)
@@ -13,6 +14,19 @@
     - [Thinkin Machine Dehumanizing Women](#thought_sexism)
     - [The Language System in the Human Brain](#thought_LLMs)
     - [References](#thought_refs)
+
+
+## Projects
+<a name="ideas"></a> 
+
+1. gather some colleagues and make a team of maximum 3 people
+1. choose a topic that you would like to research; propose your own or [check the project list](https://cryptpad.fr/kanban/#/2/kanban/view/jas2VVWrT6jsBQY9tWByDx9FNjB-6tICxl7kZebQV2s/embed/)
+1. make sure your topic does not overlap with other topics that are in progress and that have been chosen by your colleagues
+1. email sergiu to announce your team, your proposal and to discuss how to approach it
+1. after you obtain the approval, mark it as being in progress on the kanban list, and start working on it
+1. prepare the project, a presentation, and a report [using this template](https://www.overleaf.com/read/dfsmrfysqdgb#de94a7)
+1. place everything in a digital storage space somewhere: a git repo, a drive, some file on a server etc.; don’t send large files by email, send only URLs
+1. current deadline for completing projects: January 20
 
 
 
@@ -321,7 +335,7 @@ The scores of models are further predicted by the task performance of models to 
 - [Pygmalion Displacement: When Humanising AI Dehumanises Women](https://doi.org/10.31235/osf.io/jqxb6), Erscoi, L., Kleinherenbrink, A., & Guest, O.
 - [Language Is a Poor Heuristic For Intelligence](https://karawynn.substack.com/p/language-is-a-poor-heuristic-for), Karawynn Long
 - [Reclaiming AI as a theoretical tool for cognitive science](https://doi.org/10.31234/osf.io/4cbuv), van Rooij, I., Guest, O., Adolfi, F. G., de Haan, R., Kolokolova, A., & Rich, P.
-- [The neural architecture of language: Integrative modeling converges on predictive processing](https://evlab.mit.edu/assets/papers/Schrimpf_et_al_2021_PNAS.pdf), Schrimpf, M., Blank, I., Tuckute, G., Kauf, C., Hosseini, E., Kanwisher, N., Tenenbaum, J.^ & Fedorenko, E;
+- [The neural architecture of language: Integrative modeling converges on predictive processing](https://evlab.mit.edu/assets/papers/Schrimpf_et_al_2021_PNAS.pdf), Schrimpf, M., Blank, I., Tuckute, G., Kauf, C., Hosseini, E., Kanwisher, N., Tenenbaum, J.,  Fedorenko, E
 - [Other Papers from the Brain and Language Lab](https://evlab.mit.edu/research/index.html)
 - [On Chomsky and the Two Cultures of Statistical Learning](http://norvig.com/chomsky.html), debate with P. Norvig
 - [Does a language model trained on “A is B” generalize to “B is A”?](https://arxiv.org/abs/2309.12288), Lukas Berglund, Meg Tong, Max Kaufmann, Mikita Balesni, Asa Cooper Stickland, Tomasz Korbak, Owain Evans
