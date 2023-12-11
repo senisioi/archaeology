@@ -1,5 +1,9 @@
 # Archaeology of Intelligent Machines
 
+<div style="width: 100%;">
+  <img width="600" src="https://github.com/senisioi/archaeology/blob/main/img/welcome.svg?raw=true">
+</div>
+
 ## Table of Contents
 
 - [Project Ideas](#ideas)
@@ -340,9 +344,210 @@ The scores of models are further predicted by the task performance of models to 
 - [On Chomsky and the Two Cultures of Statistical Learning](http://norvig.com/chomsky.html), debate with P. Norvig
 - [Does a language model trained on “A is B” generalize to “B is A”?](https://arxiv.org/abs/2309.12288), Lukas Berglund, Meg Tong, Max Kaufmann, Mikita Balesni, Asa Cooper Stickland, Tomasz Korbak, Owain Evans
 - [Unthought: the power of the cognitive nonconscious](https://ageingcompanions.constantvzw.org/books/Unthought_N._Katherine_Hayles.pdf), Katherine Hayles
+- [The Future Looms: Weaving Women and
+Cybernetics](https://monoskop.org/images/1/13/Plant_Sadie_1995_The_Future_Looms_Weaving_Women_and_Cybernetics.pdf), Sadie Plant
+
+---
+---
+
+## Side-story: Estimating Parameters from Data
+
+We have seen in the Federalist papers how the log-likelihood ratio has been used to make a decision rule for a classifier. You will often hear or read that probabilities for words are estimated using a maximum likelihood estimator by counting the number of occurences to the total. But what is "maximum likelihood"?
+
+
+Remember the following two basic rules of probabilities:
+1. conditional probability of two events $A$ and $B$ **not** independent: 
+$$
+\text{1. }  P(A,B) = P(A)*P(A|B) \\
+= P(B,A) = P(B)*P(B|A)
+$$
+2. marginal probability as the sum of all partitions
+$$
+\text{2. }  P(B) = \sum_{A_i}P(B, A_i) = \sum_{A_i}P(B|A_i)P(A_i)
+$$
+
+From rule 1. we get Bayes' theorem:
+$$
+P(A|B) = \frac{P(A)P(B|A)}{P(B)} \\
+posterior = \frac{prior * likelihood}{marginal}
+$$
+which is equivalent to saying "we update our beliefes after the evidence is considered". 
+
+Hopefully it is more clear now, that if we talk about maximum likelihood estimation, it is probably related to the likelihood term $P(B|A)$ in the above equation.
+
+Let's start with the simplest example: we have a binary coin that returns 0, 1. We don't know at this point if the coin has been rigged and we want to use data (observed trials) to define a set of beliefes. Which one is more likely 0 or 1? Are they really equally probable? 
+
+By common sense would say each coin has the same probability, e.g., the probability of seeing $1$ is $\theta=1/2$ and that the coin is not rigged, but we can't be sure untill we see it. Sidenote, if someone is very skilled at throwing coins, it could also trick us to see what we we expect to see; is there any way to measure that?
+
+
+By seeing something, here we mean that we have some observations or some data $D = \{1,1,1,1,0\}$. We can characterize this dataset by its size $|D| = N$. We assume the data is generated randomly using a probability distribution. Given our knowledge of the world, we can make an **explicit assumption** by saying this data is made of independent events, each event being from generated with a [Bernouli distribution](https://en.wikipedia.org/wiki/Bernoulli_distribution) (iid). We could also model the data as a [Binomial distribution](https://en.wikipedia.org/wiki/Binomial_distribution), which describes the success of $N$ binary (Bernouli) independent events, each with probability $\theta$. We know the Bernouli distribution is parameterized by $\theta$ (from its definition), therefore our question is:
+- what are the most likely parameters $\theta$ of the Bernouli probability distribution $P(; \theta)$ that explain the data $D = \{x_1, x_2, ..., x_N\}$? let's note this as $\hat{\theta}$
+
+By the Maximum Likelihood Estimation, we can model $\hat{\theta}_{\text{MLE}} = \argmax_{\theta} P(D; \theta)$ since the likelihood is the most important factor in the above Bayes' rule. But there is also the Bayesian possibility of modelling the maximum a posteriori probability $\hat{\theta}_{\text{MAP}} = \argmax_{\theta} P(\theta | D)$.
+
+### Maximum Likelihood Estimation
+
+
+For our coin, we have a **parameter** $0 \leq \theta \leq 1$ that gives us the chance for the coin to give value 1:
+
+$$
+P(x=1 | \theta) = \theta ,\\ 
+P(x=0 | \theta) = 1-\theta
+$$
+and
+
+$$
+\begin{align}
+\hat{\theta} &= \operatorname*{argmax}_{\theta} p(D; \theta) \\
+&= \operatorname*{argmax}_{\theta} \prod_{i=1}^{N} p(x_i| \theta) \\
+&= \operatorname*{argmax}_{\theta} \prod_{i=1}^{N} \theta^{x_i}(1-\theta)^{1-x_i}   
+\end{align}
+$$
+
+To maximize the function we can:
+
+1. use log values (log-likelihood) to aid our computation (we can do this because the log is monotonic and the likelihood is positive)
+1. take the derivative and equate with zero to find points of extreme
+1. check the second derivative is negative to make sure it's not a point of minimum
+
+$$
+\begin{align}
+\mathcal{l}({\theta}) &=  \log \theta \sum_{i=1}^{N}x_i + \log (1-\theta) \sum_{i=1}^{N}(1-x_i) 
+\end{align}
+$$
+
+the sums above can be denoted as two constants defined by counts: $c = \sum_{i=1}^{N}x_i$ and $d = \sum_{i=1}^{N}(1-x_i) = N - c $,
+
+then if we equate with zero:
+$$
+\frac{\partial\mathcal{l}(\theta)}{\partial \theta} = \frac{\partial c\log\theta + d\log(1-\theta)}{\partial \theta} = 0
+$$
+and we get
+$$
+c\frac{1}{\theta} - (N-c)\frac{1}{1-\theta} = 0 \\
+c(1-\theta) = (N-c)\theta \\
+$$
+therefore
+$$
+\hat{\theta}_{\text{ML}} = \frac{c}{N} = \frac{\sum_{i=1}^{N}x_i}{N}
+$$
+
+which is equivalent to saying that the maximum likelihood estimator is the relative frequency of an event: the number of counts of an event divided by the total number.
+
+### Conjugate Prior
+
+We obtain similar estimations for the Binomial distribution which is defined by the rate of success of $N$ Bernouli trials, equiavalent to asking what is the probability of seeing $c$ successes (sum of all ones is $c$) after $N$ trials with binary probability $\theta$. If we preserve the previous notation of $c$ occurences of 1 and $d = N-c$ occurences of 0, then:
+
+$$
+Bin(c | \theta, N) = \begin{pmatrix} N \\ c \end{pmatrix} \theta^c(1-\theta)^{d}
+$$
+where ${\displaystyle \begin{pmatrix} N \\ c \end{pmatrix} = \frac{N!}{c!(N-c)!} = \frac{(b+c)!}{c!d!} = \begin{pmatrix} b+c \\ c \end{pmatrix}}$ represents combinations of N taken c. A constant value that we use for everything to sum up to one.
+The binomial distribution is a function that depends on $k$ and the distribution parameters are $\theta$ and $N$.
+
+
+In the above example with $D = \{1,1,1,1,0\}$, the maximum likelihood estimator would yield $P(x=1)=4/5$ which is not a very good estimator for what we would expect to be a real-life coin flip scenario. If by some chance, the data is small or is dominated by a single value, then the maximum likelihood estimator does not give very good predictions.
+
+To tackle this problem, we can apply Bayesian statistics and assume that $\theta$ is drawn from a distribution $P(\theta)$, which means there are some values that we expect to be more reasonable for our event space. 
+
+Now we can use Bayes' Theorem and say:
+$$
+P(\theta \mid D) = \frac{P(D\mid \theta) P(\theta)}{P(D)}
+$$
+For the Binomial distribution, we were looking at a distribution to give us the probability of $k$ successes, but now we need a distribution to give us the probability of a probability $\theta$.
+But what distribution can we use to model the the probability of the prior $P(\theta)$?
+
+Since $0 \leq \theta \leq 1$, we need to find a continuous probability distribution. We could use the Gaussian distribution, no? Well, according to [Bayesian statistics](https://gregorygundersen.com/blog/2019/03/16/conjugacy/), it is more feasible to choose a distribution that has the same functional form as the likelihood function $P(D|\theta)$ and when we do this we call our chosen distribution the **conjugate** to the likelihood.
+
+
+The prior with the same functional form as the Binomial is called the Beta distribution given by:
+
+$$
+Beta(\theta | a,b) = B(a,b) * \theta^{(a-1)} * (1-\theta)^{(b-1)}
+$$
+where $a$ and $b$ are distribution (hyper)parameters and $B(a,b)$ is a coefficient that depends on $a$ and $b$ used to normalize everything between 0 and 1. 
+Unlike the Binomial (where we modelled the probability of successes $c$) this distribution gives the porbability of the probability value $\theta$ and the distribution parameters are $a$ and $b$.
+
+The constant $B(a,b)$ is similar in concept to the Binomial version and is given by the inverse of the [Beta function](https://en.wikipedia.org/wiki/Beta_function):
+$$
+B(a,b) = \frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}
+$$
+The [$\Gamma$ function](https://en.wikipedia.org/wiki/Gamma_function#Motivation) is the extension of the factorial function: ${\displaystyle \Gamma (z)=\int _{0}^{\infty }t^{z-1}e^{-t}{\text{ d}}t,\ \qquad \Re (z)>0\,}$ for any complex number $z \in \mathbb{C}$ whose real part is strictly positive. A factorial is a function that obeys the recursive property $f(x+1) = xf(x)$.
+
+If we set $a$ and $b$ as complementary integers $a+b = N$, we can see that the coeficient is identical to the combinations: ${\binom {a+b}{a}}$ in the Binomial distribution. You may play with the [scipy implementation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.gamma.html) to get a hands on some examples.
+
+### Maximum a Posteriori (MAP)
+
+Getting back to our Bayes' rule to find the best $\theta$ given the data: $P(\theta \mid D) = \frac{P(D\mid \theta) P(\theta)}{P(D)}$, we can see that this is equivalent to saying:
+
+$$
+\begin{align}
+P(\theta \mid D) &= 
+C(a,b,c,d) * \theta^c(1-\theta)^{d} * \theta^{(a-1)} * (1-\theta)^{(b-1)} \\
+&= C(a,b,c,d) * \theta^{(c + a-1)} * (1-\theta)^{(d+ b-1)} \\
+&\propto  \theta^{(c + a - 1)} * (1-\theta)^{(d + b - 1)} \\
+\end{align}
+$$
+where $C(a,b,c,d) = B(c+a, d+b)$ is the normalizing constant.
+
+$a$ and $b$ are hyperparameters that change the shape and assumptions of the distribution. Exercise: use scipy to plot the Beta distribution for different parameters and see which ones would fit the assumption about the coin. Alternatively, check the plots from [Gregory Gundersen](https://gregorygundersen.com/blog/2019/03/16/conjugacy/) below:
+
+<img src="https://gregorygundersen.com/image/conjugacy/beta.png"  width="600">
+
+Let's set the params to equal values $ a=b=2 $ for now since our knowledge of a fair coin resembles the third plot above.
 
 
 
+Using the conjugate form is advantageous for the posterior has the same functional dependency on $\theta$ as the prior and the likelihood, which makes calculating the derivative of the above formula with respect to $\theta$ easy -- it will have the same shape as the one for Maximum Likelihood:
+
+$$
+\hat{\theta}_{\text{MAP}} = \frac{c+a - 1}{c+a -1 + d+b -1} = \frac{c+a - 1}{N + a + b -2}
+$$
+
+Given the previous dataset $D = \{1,1,1,1,0\}$, the number of successes $c=4$ and given that we set our values $a=b=2$ the $\hat{\theta}_{\text{MAP}} = \frac{5}{7} = .71$ which is a slightly smoother estimate than the $\hat{\theta}_{\text{ML}} = \frac{4}{5} = .8$
+
+If we have no data, then the $\hat{\theta}_{\text{MAP}}= \frac{1}{2}$.
+
+The conjugate prior is useful as a method of sequential learning because the posterior can act as prior as we see more data. Running the experiment one toss of the coin by one, we can increment $c$ and $N$ each time we have a success or we increase $d$ and $N$. Or if we fix these, we just increment $a$ and $b$ which gives meaning to these hyperparamters of the Beta distribution.
+
+I leave the following paragraph from C Bishop's book where you can read more about Pattern Recognition and Machine Learning:
+
+We see that this sequential approach to learning arises naturally when we adopt a Bayesian viewpoint. It is independent of the choice of prior and of the likelihood function and depends only on the assumption of i.i.d. data. Sequential methods make use of observations one at a time, or in small batches, and then discard them before the next observations are used. They can be used, for example, in real-time learning scenarios where a steady stream of data is arriving, and predictions must be made
+before all of the data is seen. Because they do not require the whole data set to be stored or loaded into memory, sequential methods are also useful for large data sets. Maximum likelihood methods can also be cast into a sequential framework.
+
+
+### References
+- [The Gamma Function](https://web.archive.org/web/20161112081854/http://www.plouffe.fr/simon/math/Artin%20E.%20The%20Gamma%20Function%20(1931)(23s).pdf), 1964, Emil Artin
+- [The Epic Story of Maximum Likelihood](https://arxiv.org/pdf/0804.2996.pdf), Stephen M. Stiegler
+- [Conjugacy in Bayesian Inference](https://gregorygundersen.com/blog/2019/03/16/conjugacy/), Gregory Gundersen
+- [Pattern Recognition and Machine Learning](https://github.com/peteflorence/MachineLearning6.867/blob/master/Bishop/Bishop%20-%20Pattern%20Recognition%20and%20Machine%20Learning.pdf), Christopher Bishop, 2006
+- [Probabilistic Programming and Bayesian Methods for Hackers](https://nbviewer.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter1_Introduction/Ch1_Introduction_PyMC3.ipynb)
+- [Lecture Notes from ](https://www.cs.cornell.edu/courses/cs4780/2021fa/lectures/lecturenote04.html)
+
+---
+---
+
+
+## Entropy
+
+
+
+### References
+
+- [First Links in the Markov Chain](https://www.americanscientist.org/article/first-links-in-the-markov-chain), Brian Hayes
+- [Entropia Limbii](http://dspace.bcu-iasi.ro/handle/123456789/2760), 1963, Solomon Marcus & Sorin Stati 
+- [A Mathematical Theory of Communication](https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf), 1948, Claude Shannon
+- [Prediction and Entropy of Printed English](https://www.princeton.edu/~wbialek/rome/refs/shannon_51.pdf), 1951, Claude Shannon
+- [Easy-to-follow blog post on information theory](https://colah.github.io/posts/2015-09-Visual-Information/)
+
+---
+---
+
+## Cybernetics
+
+### References
+
+- [Cybernetic Revolutionaries ](), Eden Medina
+- [Interview with Nils Gilman](https://the-santiago-boys.com/interviews/nils-gilman)
 
 
 [^1]: *even a motherly eye*? worth noting a random sexist remark in an academic paper of the '60s
