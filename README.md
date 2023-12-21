@@ -418,8 +418,8 @@ and
 
 $$
 \begin{align}
-\hat{\theta} &= \operatorname*{argmax}_{\theta} p(D; \theta) \\
-&= \operatorname*{argmax}_{\theta} \prod_{i=1}^{N} p(x_i| \theta) \\
+\hat{\theta} &= \operatorname*{argmax}_{\theta} p(D; \theta) \\ 
+&= \operatorname*{argmax}_{\theta} \prod_{i=1}^{N} p(x_i| \theta) \\ 
 &= \operatorname*{argmax}_{\theta} \prod_{i=1}^{N} \theta^{x_i}(1-\theta)^{1-x_i}   
 \end{align}
 $$
