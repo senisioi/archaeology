@@ -1,13 +1,10 @@
 # Archaeology of Intelligent Machines
 
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
-
 
 <div style="width: 100%;">
   <img width="600" src="https://github.com/senisioi/archaeology/blob/main/img/welcome.svg?raw=true">
 </div>
+
 
 ## Table of Contents
 
@@ -372,12 +369,15 @@ We have seen in the Federalist papers how the log-likelihood ratio has been used
 
 
 Remember the following two basic rules of probabilities:
-1. conditional probability of two events $A$ and $B$ **not** independent: 
+1. conditional probability of two events $A$ and $B$ **not** independent:
+
 $$
 \text{1. }  P(A,B) = P(A)*P(A|B) \\
 = P(B,A) = P(B)*P(B|A)
 $$
+
 2. marginal probability as the sum of all partitions
+
 $$
 \text{2. }  P(B) = \sum_{A_i}P(B, A_i) = \sum_{A_i}P(B|A_i)P(A_i)
 $$
@@ -408,8 +408,10 @@ By the Maximum Likelihood Estimation, we can model $\hat{\theta}_{\text{MLE}} = 
 For our coin, we have a **parameter** $0 \leq \theta \leq 1$ that gives us the chance for the coin to give value 1:
 
 $$
+\begin{align}
 P(x=1 | \theta) = \theta ,\\ 
 P(x=0 | \theta) = 1-\theta
+\end{align}
 $$
 and
 
