@@ -1,5 +1,10 @@
 # Archaeology of Intelligent Machines
 
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+
 <div style="width: 100%;">
   <img width="600" src="https://github.com/senisioi/archaeology/blob/main/img/welcome.svg?raw=true">
 </div>
@@ -18,7 +23,16 @@
     - [Thinkin Machine Dehumanizing Women](#thought_sexism)
     - [The Language System in the Human Brain](#thought_LLMs)
     - [References](#thought_refs)
+- [Side-story: Estimating Parameters from Data](#map_mle)
+    - [Maximum Likelihood Estimation](#mle)
+    - [Conjugate Priors](#conj)
+    - [Maximum a Posteriori Estimation](#map)
+    - [References](#map_mle_refs)
 
+- [Entropy](#entropy)
+    - [References](#entropy_refs)
+- [Cybernetics](#cybernetics)
+    - [References](#cybernetics_refs)
 
 ## Projects
 <a name="ideas"></a> 
@@ -350,7 +364,9 @@ Cybernetics](https://monoskop.org/images/1/13/Plant_Sadie_1995_The_Future_Looms_
 ---
 ---
 
+
 ## Side-story: Estimating Parameters from Data
+<a name="map_mle"></a> 
 
 We have seen in the Federalist papers how the log-likelihood ratio has been used to make a decision rule for a classifier. You will often hear or read that probabilities for words are estimated using a maximum likelihood estimator by counting the number of occurences to the total. But what is "maximum likelihood"?
 
@@ -386,6 +402,7 @@ By seeing something, here we mean that we have some observations or some data $D
 By the Maximum Likelihood Estimation, we can model $\hat{\theta}_{\text{MLE}} = \argmax_{\theta} P(D; \theta)$ since the likelihood is the most important factor in the above Bayes' rule. But there is also the Bayesian possibility of modelling the maximum a posteriori probability $\hat{\theta}_{\text{MAP}} = \argmax_{\theta} P(\theta | D)$.
 
 ### Maximum Likelihood Estimation
+<a name="mle"></a> 
 
 
 For our coin, we have a **parameter** $0 \leq \theta \leq 1$ that gives us the chance for the coin to give value 1:
@@ -435,6 +452,7 @@ $$
 which is equivalent to saying that the maximum likelihood estimator is the relative frequency of an event: the number of counts of an event divided by the total number.
 
 ### Conjugate Prior
+<a name="conj"></a> 
 
 We obtain similar estimations for the Binomial distribution which is defined by the rate of success of $N$ Bernouli trials, equiavalent to asking what is the probability of seeing $c$ successes (sum of all ones is $c$) after $N$ trials with binary probability $\theta$. If we preserve the previous notation of $c$ occurences of 1 and $d = N-c$ occurences of 0, then:
 
@@ -476,6 +494,7 @@ The [$\Gamma$ function](https://en.wikipedia.org/wiki/Gamma_function#Motivation)
 If we set $a$ and $b$ as complementary integers $a+b = N$, we can see that the coeficient is identical to the combinations: ${\binom {a+b}{a}}$ in the Binomial distribution. You may play with the [scipy implementation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.gamma.html) to get a hands on some examples.
 
 ### Maximum a Posteriori (MAP)
+<a name="map"></a> 
 
 Getting back to our Bayes' rule to find the best $\theta$ given the data: $P(\theta \mid D) = \frac{P(D\mid \theta) P(\theta)}{P(D)}$, we can see that this is equivalent to saying:
 
@@ -516,6 +535,8 @@ before all of the data is seen. Because they do not require the whole data set t
 
 
 ### References
+<a name="map_mle_refs"></a> 
+
 - [The Gamma Function](https://web.archive.org/web/20161112081854/http://www.plouffe.fr/simon/math/Artin%20E.%20The%20Gamma%20Function%20(1931)(23s).pdf), 1964, Emil Artin
 - [The Epic Story of Maximum Likelihood](https://arxiv.org/pdf/0804.2996.pdf), Stephen M. Stiegler
 - [Conjugacy in Bayesian Inference](https://gregorygundersen.com/blog/2019/03/16/conjugacy/), Gregory Gundersen
@@ -528,10 +549,11 @@ before all of the data is seen. Because they do not require the whole data set t
 
 
 ## Entropy
-
-
+<a name="entropy"></a> 
+TBA
 
 ### References
+<a name="entropy_refs"></a> 
 
 - [First Links in the Markov Chain](https://www.americanscientist.org/article/first-links-in-the-markov-chain), Brian Hayes
 - [Entropia Limbii](http://dspace.bcu-iasi.ro/handle/123456789/2760), 1963, Solomon Marcus & Sorin Stati 
@@ -543,8 +565,11 @@ before all of the data is seen. Because they do not require the whole data set t
 ---
 
 ## Cybernetics
+<a name="cybernetics"></a> 
+TBA
 
 ### References
+<a name="cybernetics_refs"></a> 
 
 - [Cybernetic Revolutionaries ](), Eden Medina
 - [Interview with Nils Gilman](https://the-santiago-boys.com/interviews/nils-gilman)
