@@ -409,7 +409,7 @@ For our coin, we have a **parameter** $0 \leq \theta \leq 1$ that gives us the c
 
 $$
 \begin{align}
-P(x=1 | \theta) = \theta ,\\ 
+P(x=1 | \theta) = \theta ,\\\\ 
 P(x=0 | \theta) = 1-\theta
 \end{align}
 $$
