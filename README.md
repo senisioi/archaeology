@@ -1,15 +1,23 @@
-# Archaeology of Intelligent Machines
+# Archaeology of Intelligent Machines 2024-2025
 
 
 <div style="width: 100%;">
-  <img width="600" src="https://github.com/senisioi/archaeology/blob/main/img/welcome.svg?raw=true">
+  <img width="800" src="https://github.com/senisioi/archaeology/blob/main/img/welcome.svg?raw=true">
 </div>
+
+## Hot Topics in AI
+
+- [Data Workers' Inquiry](https://data-workers.org/)
+- [Mystery AI Hype Theater 3000](https://www.dair-institute.org/maiht3k/)
+- [Project Ideas](#ideas)
+- [Bibliography](https://drive.google.com/drive/folders/18ANcFS2GYbHBAD2BlMGWsmf7I2AuRNy4?usp=sharing)
 
 
 ## Table of Contents
 
-- [Project Ideas](#ideas)
-- [Introductory Course](#intro)
+- [Introductory Course](https://docs.google.com/presentation/d/1yLKRHPh5WVZihn0-snW6R2cnRlYbzvHR-rcucmdv_sM/edit?usp=sharing)
+
+- [A Social History of Artificial Intelligence](#intro)
     - [References](#intro_refs)
 - [Exploratory Data Analysis, Federalist Papers, and Bayesian Inference](#eda)
     - [References](#eda_refs)
@@ -35,13 +43,13 @@
 <a name="ideas"></a> 
 
 1. gather some colleagues and make a team of maximum 3 people
-1. choose a topic that you would like to research; propose your own or [check the project list](https://cryptpad.fr/kanban/#/2/kanban/view/jas2VVWrT6jsBQY9tWByDx9FNjB-6tICxl7kZebQV2s/embed/)
+1. choose a topic that you would like to research; propose your own or [check the project list](tba)
 1. make sure your topic does not overlap with other topics that are in progress and that have been chosen by your colleagues
-1. email sergiu to announce your team, your proposal and to discuss how to approach it
-1. after you obtain the approval, mark it as being in progress on the kanban list, and start working on it
+1. email the team (Sergiu, Sasha, Mircea, Alex) to announce your team, your proposal and to discuss how to approach it
+1. wait for a confirmation from one of us and only after you obtain the approval, mark it as being in progress on the kanban list, and start working on it
 1. prepare the project, a presentation, and a report [using this template](https://www.overleaf.com/read/dfsmrfysqdgb#de94a7)
 1. place everything in a digital storage space somewhere: a git repo, a drive, some file on a server etc.; don’t send large files by email, send only URLs
-1. current deadline for completing projects: January 20
+1. current deadline for completing projects: TBA
 
 
 
@@ -77,6 +85,7 @@ Frank Rosenblatt
 - [Calculating Space](https://sferics.idsia.ch/pub/juergen/zuserechnenderraum.pdf), Konrad Zuse 
 - [Algorithmic Theories of Everything](https://arxiv.org/abs/quant-ph/0011122), Jürgen Schmidhuber
 - [Theory of Self-Reproducing Automata](https://cba.mit.edu/events/03.11.ASE/docs/VonNeumann.pdf), John von Neumann
+- [The Eye of the Master: A Social History of Artificial Intelligence](https://annas-archive.org/search?q=The%20Eye%20of%20the%20Master:%20A%20Social%20History%20of%20Artificial%20Intelligence)
 
 ---
 ---
@@ -197,8 +206,6 @@ where $\mu_{H_i}$ and $\mu_{M_i}$ are estimated means of occurences / 1000 words
 - [Bayesian statistics](https://gwern.net/doc/statistics/decision/1972-savage-foundationsofstatistics.pdf), Savage
 
 
-
-
 ---
 ---
 
@@ -285,6 +292,7 @@ Golovin stopped short and sat down.
 ### Thinking Machine Dehumanizing Women
 <a name="thought_sexism"></a> 
 
+Actually, quite a bunch of materials for this course have been recommended by [Olivia Guest](https://olivia.science/), consider following more of here interesting work, one of the authors for the below paper.
 
 <img width="600" src="https://github.com/senisioi/archaeology/blob/main/img/pygmalion_ErscoiKleinherenbrinkGuest2023.png?raw=true">
 
@@ -358,258 +366,6 @@ The scores of models are further predicted by the task performance of models to 
 - [The Future Looms: Weaving Women and
 Cybernetics](https://monoskop.org/images/1/13/Plant_Sadie_1995_The_Future_Looms_Weaving_Women_and_Cybernetics.pdf), Sadie Plant
 
----
----
-
-
-## Side-story: Estimating Parameters from Data
-<a name="map_mle"></a> 
-You will often hear or read that probabilities for words are estimated using a maximum likelihood estimator by counting the number of occurences to the total. But what is "maximum likelihood"?
-
-
-Remember the following two basic rules of [probabilities](https://www.wikiwand.com/en/Conditional_probability#Media/File:Bayes_theorem_visualisation.svg):
-1. conditional probability of two events $A$ and $B$ **not** independent:
-$$
-\text{1. }  P(A,B) = P(A)*P(A|B) \\
-= P(B,A) = P(B)*P(B|A)
-$$
-2. marginal probability as the sum of all partitions
-$$
-\text{2. }  P(B) = \sum_{A_i}P(B, A_i) = \sum_{A_i}P(B|A_i)P(A_i)
-$$
-
-From rule 1. we get Bayes' theorem:
-$$
-P(A|B) = \frac{P(A)P(B|A)}{P(B)} \\
-posterior = \frac{prior * likelihood}{marginal}
-$$
-which is equivalent to saying "we update our beliefes after the evidence is considered".
-
-Hopefully it is more clear now, that if we talk about maximum likelihood estimation, it might have something to do **likelihood** term $P(B|A)$ in the above equation.
-
-### Back to the Coin
-Let's start with the simplest example: we have a binary coin that returns 0, 1. We don't know at this point if the coin has been rigged and we want to use data (observed trials) to define a set of beliefes. Which one is more likely 0 or 1? Are they really equally probable?
-
-Common sense would say each coin has the same probability, e.g., the probability of seeing $1$ is $\theta=1/2$ and that the coin is not rigged, but we can't be sure untill we see it. Sidenote, if someone is very skilled at throwing coins, it could also trick us to see what we we expect to see; is there any way to measure that?
-
-
-By seeing something, here we mean that we have some **observations** or some data $D = \{1,1,1,1,0\}$. We can characterize this dataset by its size $|D| = N$. We assume the data is generated randomly using a probability distribution. Given our knowledge of the world, we can make an **explicit assumption** by saying this data is made of independent events, each event being from generated with a [Bernouli distribution](https://en.wikipedia.org/wiki/Bernoulli_distribution) (iid). The probability mass function of the Bernoulli is:
-
-\begin{align}
-f(k; \theta) = P(k;\theta) = p_{\theta}(k)&={\begin{cases}\theta&{\text{if }}k=1,\\1-\theta&{\text{if }}k=0.\end{cases}} \\
-&= \theta^k(1-\theta)^{(1-k)}
-\end{align}
-
-We could also model the data as a [Binomial distribution](https://en.wikipedia.org/wiki/Binomial_distribution), which describes the success of $N$ binary (Bernouli) independent events, each with probability $\theta$. If we know we have $N$ events and want to compute the probability of observing $c$ successes, then the probability mass function of the Binomial is:
-
-\begin{equation}
-{\displaystyle f(c,N,\theta)=P(c;N,\theta)=p_{\theta, N}(c)={\binom {N}{c}}\theta^{c}(1-\theta)^{N-c}}
-\end{equation}
-
-We use different notations in PMF to make it clear that different textbooks refer to the same thing.
-
-
-
-We know the Bernouli distribution is parameterized by $\theta$ (from its definition), therefore our question is:
-- what are the most likely parameters $\theta$ of the Bernouli probability distribution $P_{\theta}(\cdots)$ that explain the data $D = \{x_1, x_2, ..., x_N\}$? let's note this as $\hat{\theta}$
-- one might encounter the parameters writted with a column $P(\cdots ; \theta)$ or defined as a separate function ${\mathcal {L}}(\theta \mid \cdots) = {\mathcal {L}}(\theta) = {\mathcal {L}}_{N}(\theta )={\mathcal {L}}_{N}(\theta ; \cdots )=f_{N}(\cdots ;\theta )\;$
-- we use $\cdots$ do signify any notation for data, here we will used $D$, but $\mathbf{y}$ is also often encountered; sometimes the data is ommited completely ${\mathcal {L}}(\theta)$
-
-Bayesian statistics allows treating these parameters as coming from a distribution while frequentist statistics does not allow distributions of unobserved variables (such as parameters). Causal models (see Bayesian statistics [course here](https://github.com/rmcelreath/stat_rethinking_2024)) start by modelling a generating process of the data. For a brief comparison between Bayesian and frequentist statistics, [see this blog post](https://medium.com/@roshmitadey/frequentist-v-s-bayesian-statistics-24b959c96880). Maximum likelihood estimation is inherently a frequentist approach. Keep in mind that this is not the only approach to estimate the parameters from the data.
-
-
-
-### Maximum Likelihood Estimation
-The formal textbook definition of the likelihood function in frequentist statistics is written in multiple ways, depending on the textbook:
-$$
-{\mathcal {L}}(\theta \mid x) = P(X=x; \theta) =p_{\theta }(x) =P_{\theta }(X=x)
-$$ 
-representing the probability of observing the outcome $x$ of random variable $X$ given the probability parameter $\theta$, given a discreet probability mass function $p_{\theta}$. Yet another name for the sanme thing! The likelihood is the same as the probability mass/density function, but with a fixed parameter $\theta$ and with the interpretation that it is related to a speciffic set of observations $D$. In the case of discrete distributions, likelihood is a synonym for the joint probability of your data. In the case of continuous distribution, likelihood refers to the joint probability density of your data.
-
-By the Maximum Likelihood Estimation, we mean the parameter $\theta$ that maximizes our entire dataset $D$:
-
-$$
-\hat{\theta}_{\text{MLE}} = \operatorname*{argmax}_{\theta} P_{\theta}(D)
-$$
-For independent and identically distributed random variables [iid](https://stats.stackexchange.com/a/17392), such as our dataset $D$, $P_{\theta}(D)$ will be the product of univariate density functions: 
-$$
-\hat{\theta}_{\text{MLE}} = \operatorname*{argmax}_{\theta} \prod_{i=1}^{N}  p_{\theta}(x_i)
-$$
-
-
-
-For our coin, these are individual Bernoullis and we have a **parameter** $0 \leq \theta \leq 1$ that gives us the chance for the coin to give value 1:
-
-$$
-p_{\theta}(1) = \theta ,\\
-p_{\theta}(0) = 1-\theta
-$$
-therefore
-
-$$
-\begin{align}
-\hat{\theta} &= \operatorname*{argmax}_{\theta} {\mathcal {L}}(D | \theta) \\
-\hat{\theta} &= \operatorname*{argmax}_{\theta} \prod_{i=1}^{N}  p_{\theta}(x_i) \\
-&= \operatorname*{argmax}_{\theta} \prod_{i=1}^{N} \theta^{x_i}(1-\theta)^{(1-x_i)} \\
-\end{align}
-$$
-
-To maximize the function we can:
-
-1. use log values (log-likelihood $l(\theta) = log{\mathcal{L}}(\theta)$ to aid our computation (we can do this because the log is monotonic and the likelihood is positive)
-1. take the derivative and equate with zero to find points of extreme
-1. check the second derivative is negative to make sure it's not a point of minimum
-
-$$
-\begin{align}
-\mathcal{l}({\theta}) &=  \log \theta \sum_{i=1}^{N}x_i + \log (1-\theta) \sum_{i=1}^{N}(1-x_i)
-\end{align}
-$$
-
-the sums above can be denoted as two constants defined by counts: $c = \sum_{i=1}^{N}x_i$ and therefore $N - c = \sum_{i=1}^{N}(1-x_i) $,
-
-then if we equate with zero:
-$$
-\frac{\partial\mathcal{l}(\theta)}{\partial \theta} = \frac{\partial c\log\theta + (N - c)\log(1-\theta)}{\partial \theta} = 0
-$$
-and we get
-$$
-c\frac{1}{\theta} - (N-c)\frac{1}{1-\theta} = 0 \\
-c(1-\theta) = (N-c)\theta \\
-$$
-therefore
-$$
-\hat{\theta} = \frac{c}{N} = \frac{\sum_{i=1}^{N}x_i}{N}
-$$
-
-which is equivalent to saying that the maximum likelihood estimator is the relative frequency of an event: the number of counts of an event divided by the total number.
-
-Long story short, MLE estimation is a means to derive the parameters that best describe a set of observations by doing a derivative over parameters using the probability mass/density function across a dataset.
-
-#### What if we are wrong?
-In the above example with $D = \{1,1,1,1,0\}$, the maximum likelihood estimator would yield $\hat{\theta} =4/5$ which is not a very good estimator for what we would expect to be a real-life coin flip scenario. If by some chance, the data is small or is dominated by a single value, then the maximum likelihood estimator does not give very good predictions. What if we have no observations of value $0$ in our sample?
-
-A first solution would be to introduce some smoothing constants (or hallucinations) in the estimator, suppose we add $m$ heads and $m$ tails in our estimator:
-$$
-\hat{\theta} = \frac{c + m}{N + 2m} =  \frac{m + \sum_{i=1}^{N}x_i}{N + 2m}
-$$
-
-This can be arbitrary? How many new samples should we add after all?
-
-
-
-
-### Maximum a Posteriori
-To tackle this problem, we can break the frequentist assumption that parameters are not observable events. Thus, we apply Bayesian statistics and assume that $\theta$ is drawn from a distribution $P(\theta)$, which means there are some values that we expect to be more reasonable for our event space.
-This is how we introduce **prior** knowledge about the world within our model. 
-The frequentist likelihood function $P(D ; \theta)$ or $P_{\theta}(D)$ becomes an actual conditional probability $P(D | \theta)$ which is the same as the likelihood in Bayes' formula. Bayesian statistics is a lot about priors. It's not about using Bayes' Theorem :-)
-
-But we can still use Bayes' Theorem and find the best parameter $\theta$ given the data $D$:
-$$
-P(\theta \mid D) = \frac{P(D\mid \theta) P(\theta)}{P(D)}
-$$
-
-
-We have the following terminology:
-- $P(\theta \mid D)$ posterior probabilities after observing the data
-- $P(\theta)$ priors
-- $P(D\mid \theta)$ likelihood, can be defined as the PMF or PDF
-- $P(D)$ the marginals which sometimes are denoted by $Z$, are usually untractable, and treated as a normalizing factor since they do not impact $\operatorname*{argmax}_{\theta}$. The marginals may also be encountered as the sum of all partitions or an integral.
-
-The maximum a posteriori is about finding the best parameters that explain our data by modelling the posterior probabilities:
-$$
-\begin{align}
-\hat{\theta}_{\text{MAP}} &= \operatorname*{argmax}_{\theta} P(\theta \mid D) \\
-&= \operatorname*{argmax}_{\theta} P(D\mid \theta) P(\theta) \\
-&= \operatorname*{argmax}_{\theta} \log P(D\mid \theta) + \log P(\theta)
-\end{align}
-$$
-
-For the Binomial distribution, we were looking at a distribution to give us the probability of $k$ successes, but now we need a distribution to give us the probability of a probability $\theta$.
-But what distribution can we use to model the the probability of the prior $P(\theta)$?
-
-
-
-### Conjugate Prioris
-
-Remember the Binomial distribution which is defined by the rate of success of $N$ Bernouli trials, equiavalent to asking what is the probability of seeing $c$ successes (sum of all ones is $c$) after $N$ trials with binary probability $\theta$. If we preserve the previous notation of $c$ occurences of 1 and note $d = N-c$ occurences of 0, then:
-
-$$
-Bin(c | \theta, N) = \begin{pmatrix} N \\ c \end{pmatrix} \theta^c(1-\theta)^{d}
-$$
-where 
-$$
-{\displaystyle \begin{pmatrix} N \\ c \end{pmatrix} = \frac{N!}{c!(N-c)!} = \frac{(d+c)!}{c!d!} = \begin{pmatrix} d+c \\ c \end{pmatrix}}
-$$
-represents combinations of N taken c. 
-The binomial distribution is a function that depends on $c$ and the distribution parameters are $\theta$ and $N$.
-
-
-Since $0 \leq \theta \leq 1$, we need to find a continuous probability distribution. We could use the Gaussian distribution, no? Well, according to [Bayesian statistics](https://gregorygundersen.com/blog/2019/03/16/conjugacy/), it is more feasible to choose a distribution that has the same functional form as the likelihood function $P(D|\theta)$ and when we do this we call our chosen distribution the **conjugate** to the likelihood.
-
-
-The prior with the same functional form as the Binomial is called the Beta distribution given by:
-
-$$
-Beta(\theta | \alpha, \beta) = B(\alpha,\beta) * \theta^{(\alpha-1)} * (1-\theta)^{(\beta-1)}
-$$
-where $\alpha$ and $\beta$ are distribution (hyper)parameters $\in \mathbf{R}$ and $B(\alpha,\beta)$ is a coefficient that depends on $\alpha$ and $\beta$ used to normalize everything between 0 and 1. The constant $B(\alpha,\beta)$ is similar in concept to the Binomial version and is given by the inverse of the [Beta function](https://en.wikipedia.org/wiki/Beta_function):
-$$
-B(\alpha,\beta) = \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}
-$$
-
-The [$\Gamma$ function](https://en.wikipedia.org/wiki/Gamma_function#Motivation) is the extension of the factorial function: ${\displaystyle \Gamma (z)=\int _{0}^{\infty }t^{z-1}e^{-t}{\text{ d}}t,\ \qquad \Re (z)>0\,}$ for any complex number $z \in \mathbb{C}$ whose real part is strictly positive. A factorial is a function that obeys the recursive property $f(x+1) = xf(x)$.
-
-
-Unlike the Binomial (where we modelled the probability of successes $c$) the Beta distribution gives the porbability of the probability value $\theta$ and the distribution parameters are real values $\alpha$ and $\beta$.
-
-
-If we set $\alpha$ and $\beta$ as complementary integers $\alpha+\beta = N$, we can see that the coeficient is identical to the combinations: ${\binom {\alpha+\beta}{\alpha}}$ in the Binomial distribution. You may play with the [scipy implementation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.gamma.html) to get a hands on some examples.
-
-#### Maximum a Posteriori Estimation
-Now that we have a conjugate to model the parameter $\theta$, we can get back to our maximum aposteriori rule to find the best $\theta$ given the data: $P(\theta \mid D) = \frac{P(D\mid \theta) P(\theta)}{P(D)}$, we can see that this is equivalent to saying:
-
-$$
-\begin{align}
-P(\theta \mid D) &=
-C(\alpha,\beta,c,d) * \theta^c(1-\theta)^{d} * \theta^{(\alpha-1)} * (1-\theta)^{(\beta-1)} \\
-&= C(\alpha,b,c,d) * \theta^{(c + \alpha-1)} * (1-\theta)^{(d+ \beta-1)} \\
-&\propto  \theta^{(c + \alpha - 1)} * (1-\theta)^{(d + \beta - 1)} \\
-\end{align}
-$$
-where $C(\alpha,\beta,c,d) = B(c+\alpha, d+\beta)$ is the normalizing constant.
-
-It is clear now that using the conjugate form is advantageous for the posterior has the same functional dependency on $\theta$ as the prior and the likelihood, which makes calculating the derivative of the above formula with respect to $\theta$ easy -- it will have the same shape as the one for Maximum Likelihood:
-
-$$
-\hat{\theta} = \frac{c+\alpha - 1}{c+\alpha + d+\beta -1} = \frac{c+\alpha - 1}{N + \alpha + \beta -1}
-$$
-
-
-Getting back to our example of $m$ hallucinations, now we must set some priors.
-Looking at differrent plots of the Beta distribution
-<img width="600" src="https://gregorygundersen.com/image/conjugacy/beta.png">
-for different values of $(\alpha, \beta) \in \{(0.1,0.1), (1,1), (2,2), (2,3)\}$, we must make a modelling assumption based on prior knowledge. Coin flipping is expected to be a symmetric distribution with the mode at 1/2.
-Observing a data set of $m$ observations of $1$ and $m$ observations of $0$ increases the value of $\alpha$ by $m$, and the value of $\beta$ by $m$, in going from the prior distribution to the posterior distribution. This allows us to provide a simple interpretation of the hyperparameters $\alpha$ and $\beta$ in the prior as
-an effective number of observations of $1$ and $0$, respectively. Note that $\alpha$ and $\beta$ need not be integers.
-
-Furthermore, the posterior distribution can act as the prior if we subsequently observe additional data. To see this, we can imagine taking observations one at a time and after each observation updating the current posterior distribution by multiplying by the likelihood function for the new observation and then normalizing to obtain the new, revised posterior distribution. At each stage, the posterior is a Beta distribution with some total number of (prior and actual) observed
-values for $1$ and $0$ given by the parameters $\alpha$ and $\beta$. Incorporation of an additional observation of $1$ simply corresponds to incrementing the value of $\alpha$ by 1, whereas for an observation of $0$ we increment $\beta$ by 1. Example by [Gregory Gundersen](https://gregorygundersen.com/blog/2019/03/16/conjugacy).
-
-
-
-### Exercise
-Derive the MLE estimator for the parameters of a Gaussian distribution.
-
-### References
-- [Statistical Rethinking](https://annas-archive.org/md5/0248fb4ed1c61ea56aa4a5872e196a85), consider starting with Chapter 2
-- [Maximum Likelihood course notes](https://web.stanford.edu/class/archive/cs/cs109/cs109.1192/lectureNotes/21%20-%20MLE.pdf)
-- [Comparison of MLE and MAP](https://www.cs.cornell.edu/courses/cs4780/2021fa/lectures/lecturenote04.html)
-- [The Gamma Function](https://web.archive.org/web/20161112081854/http://www.plouffe.fr/simon/math/Artin%20E.%20The%20Gamma%20Function%20(1931)(23s).pdf), 1964, Emil Artin
-- [The Epic Story of Maximum Likelihood](https://arxiv.org/pdf/0804.2996.pdf), Stephen M. Stiegler
-- [Conjugacy in Bayesian Inference](https://gregorygundersen.com/blog/2019/03/16/conjugacy/), Gregory Gundersen
-
-
 
 ---
 ---
@@ -617,11 +373,12 @@ Derive the MLE estimator for the parameters of a Gaussian distribution.
 
 ## Entropy
 <a name="entropy"></a> 
-TBA
+What is entropy? Why are we using cross-entropy as loss function?
 
 ### References
 <a name="entropy_refs"></a> 
 
+- [Entropy demystified: the second law of thermodynamics reduced to plain common sense](https://annas-archive.org/md5/12876bbff6b274ea6bcbaa03a976d97a)
 - [First Links in the Markov Chain](https://www.americanscientist.org/article/first-links-in-the-markov-chain), Brian Hayes
 - [Entropia Limbii](http://dspace.bcu-iasi.ro/handle/123456789/2760), 1963, Solomon Marcus & Sorin Stati 
 - [A Mathematical Theory of Communication](https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf), 1948, Claude Shannon
@@ -638,8 +395,11 @@ TBA
 ### References
 <a name="cybernetics_refs"></a> 
 
-- [Cybernetic Revolutionaries ](), Eden Medina
+- [Cybernetic Revolutionaries](https://annas-archive.org/md5/8adba15d9f4b06e94acdb348602ddf73), Eden Medina
 - [Interview with Nils Gilman](https://the-santiago-boys.com/interviews/nils-gilman)
+
+
+
 
 
 [^1]: *even a motherly eye*? worth noting a random sexist remark in an academic paper of the '60s

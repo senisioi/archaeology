@@ -1,4 +1,4 @@
-# Archaeology Labs
+# Archaeology Labs (TBA)
 
 - Lab 1 - [Introduction to stylometry](https://github.com/senisioi/archaeology/blob/main/labs/L1.md); original material [published here](https://doi.org/10.46430/phen0078); we will use spaCy instead of NLTK and take a slightly different approach
 
