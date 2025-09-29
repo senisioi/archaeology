@@ -404,6 +404,6 @@ TBA
 
 [^1]: *even a motherly eye*? worth noting a random sexist remark in an academic paper of the '60s
 
-[^2]: ask youreself who is being tested and what game is being used. The river crossing problem is rooted in a history of [sexism, racism, and colonialism](https://pballew.blogspot.com/2022/09/a-brief-history-of-river-crossing.html). What were the missionaries doing there anyways?
+[^2]: ask yourself who is being tested and what game is being used. The river crossing problem is rooted in a history of [sexism, racism, and colonialism](https://pballew.blogspot.com/2022/09/a-brief-history-of-river-crossing.html). What were the missionaries doing there anyways?
 
-[^3]: Alan Turing has been infamously [persecuted for being LGBTQ+](https://www.thepinknews.com/2023/06/06/alan-turing-gay-who-was-did-eingma-die-death-facts/); also Wittgenstein was [allegedly queer](https://www.newyorker.com/magazine/2022/05/16/how-queer-was-ludwig-wittgenstein) and [strongly mysoginistic](https://www.nordicwittgensteinreview.com/article/view/3651/9)
+[^3]: Alan Turing has been infamously [persecuted for being LGBTQ+](https://www.thepinknews.com/2023/06/06/alan-turing-gay-who-was-did-eingma-die-death-facts/); also Wittgenstein was [allegedly queer](https://www.newyorker.com/magazine/2022/05/16/how-queer-was-ludwig-wittgenstein) and [strongly misogynistic](https://www.nordicwittgensteinreview.com/article/view/3651/9)
