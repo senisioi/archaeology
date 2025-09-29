@@ -1,4 +1,4 @@
-# Archaeology of Intelligent Machines 2024-2025
+# Archaeology of Intelligent Machines 2025-2026
 
 
 <div style="width: 100%;">
