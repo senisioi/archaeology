@@ -2,7 +2,7 @@
 
 
 <div style="width: 100%;">
-  <img width="800" src="https://github.com/senisioi/archaeology/blob/main/img/welcome.svg?raw=true">
+  <img width="800" src="https://github.com/senisioi/archaeology/blob/main/img/welcome.svg">
 </div>
 
 ## Hot Topics in AI
