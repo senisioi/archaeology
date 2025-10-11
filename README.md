@@ -257,7 +257,7 @@ But in the study of the physical body, nobody would raise a question analogous t
 <a name="thought_game"></a> 
 
 
-<img width="600" src="https://github.com/senisioi/archaeology/blob/main/img/igra.png?raw=true">
+<img width="600" src="https://raw.githubusercontent.com/senisioi/archaeology/refs/heads/2023/img/igra.png">
 
 
 [URL here](https://www.hardproblem.ru/en/posts/Events/a-russian-chinese-room-story-antedating-searle-s-1980-discussion/) short version on [wikipedia](https://en.wikipedia.org/wiki/Anatoly_Dneprov_(writer)#The_Game), trilingual [PDF here](http://q-bits.org/images/Dneprov.pdf)
@@ -294,7 +294,7 @@ Golovin stopped short and sat down.
 
 Actually, quite a bunch of materials for this course have been recommended by [Olivia Guest](https://olivia.science/), consider following more of here interesting work, one of the authors for the below paper.
 
-<img width="600" src="https://github.com/senisioi/archaeology/blob/main/img/pygmalion_ErscoiKleinherenbrinkGuest2023.png?raw=true">
+<img width="600" src="https://raw.githubusercontent.com/senisioi/archaeology/refs/heads/2023/img/pygmalion_ErscoiKleinherenbrinkGuest2023.png">
 
 - image from [Pygmalion displacement paper](https://osf.io/preprints/socarxiv/jqxb6)
 - [The Thinking Machine](https://www.youtube.com/watch?v=cvOTKFXpvKA) documentary from the '60s where the is moderator smoking a pipe nonchalantly.
@@ -333,7 +333,7 @@ If this was indeed Turing’s intention, the computer imitates a man imitating (
 
 
 
-<img width="600" src="https://github.com/senisioi/archaeology/blob/main/img/schrimpf_et_al_2021.png?raw=true">
+<img width="600" src="https://raw.githubusercontent.com/senisioi/archaeology/refs/heads/2023/img/schrimpf_et_al_2021.png">
 
 
 The neuroscience of perception has recently been revolutionized with an integrative modeling approach in which computation, brain function, and behavior are linked across many datasets and many computational models. By revealing trends across models, this approach yields novel insights into cognitive and neural mechanisms in the target domain. We here present a systematic study taking this approach to higher-level cognition: human language processing, our species’ signature cognitive skill. We find that the most powerful “transformer” models predict nearly 100% of explainable variance in neural responses to sentences and generalize across different datasets and imaging modalities (functional MRI and electrocorticography). Models’ neural fits (“brain score”) and fits to behavioral responses are both strongly correlated with model accuracy on the next-word prediction task (but not other language tasks). Model architecture appears to substantially contribute to neural fit. These results provide computationally explicit evidence that predictive processing fundamentally shapes the language comprehension mechanisms in the human brain.
